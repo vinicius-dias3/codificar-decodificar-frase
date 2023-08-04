@@ -29,7 +29,7 @@ html{
 
 .conteiner > p{
     width: 400px;
-    padding: 15px;
+    padding: 15px 0;
 }
 
 h1, h3{
@@ -46,7 +46,7 @@ h1, h3{
 .conteiner-entrada-frase .span{
     font-style: italic;
     font-size: 14px;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 .conteiner-entrada-frase .btn{
@@ -102,11 +102,34 @@ h1, h3{
 
 .conteiner-saida-frase .resultado .btn-copiar{
     color: #93e327;
-    background-color: white;
+    /* background-color: white; */
     font-size: 40px;
     position: absolute;
     right: 2%;
     bottom: -40px;
     cursor: pointer;
     border: transparent;
+}
+
+.conteiner-saida-frase .resultado .btn-copiar.ativar-animacao .fa-copy{
+    animation: efeito .5s;
+}
+
+@keyframes efeito{
+    0%{
+        transform: scale(1.1);
+        opacity: .7;
+    }
+    45%{
+        transform: scale(1.4);
+        opacity: .6;
+    }
+    85%{
+        color: #6db60f;
+        opacity: .9;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
