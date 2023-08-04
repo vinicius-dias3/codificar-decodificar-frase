@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@400;700&display=swap');
 
 body{
     min-height: 100vh;
@@ -10,7 +10,7 @@ body{
 }
 
 html{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Slab', serif;
     color: #5d5d5d;
 }
 
@@ -45,15 +45,16 @@ h1, h3{
 
 .conteiner-entrada-frase .span{
     font-style: italic;
-    font-weight: 300;
-    font-size: 13px;
+    font-size: 14px;
+    margin: 5px;
 }
 
 .conteiner-entrada-frase .btn{
     padding: 12px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .conteiner-frases .conteiner-saida-frase{
@@ -61,11 +62,11 @@ h1, h3{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: -35px;
 }
 
 .conteiner-frases .conteiner-saida-frase h3{
     margin-bottom: 30px;
+    margin-left: 60px;
     align-self: center;
 }
 
@@ -73,8 +74,8 @@ h1, h3{
     margin: 0 20px 30px;
     outline: 5px solid rgb(231, 231, 231);
     outline-offset: 20px;
-    width: 500px;
-    height: 140px;
+    width: 450px;
+    height: 110px;
     border-radius: 20px;
     position: relative;
     padding: 10px 20px 0;
@@ -87,13 +88,25 @@ h1, h3{
 
 .conteiner-frases .resultado .aspas.fa-quote-left{
     position: absolute;
+    transform: rotateY(180deg) rotate(180deg);
     top: -35px;
     left: 0;
+    background-color: white;
 }
 
-.conteiner-frases .resultado .aspas.fa-quote-right{
-    transform: rotateX(180deg);
+.conteiner-saida-frase .resultado p{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.conteiner-saida-frase .resultado .btn-copiar{
+    color: #93e327;
+    background-color: white;
+    font-size: 40px;
     position: absolute;
-    bottom: -30px;
-    right: 0;
+    right: 2%;
+    bottom: -40px;
+    cursor: pointer;
+    border: transparent;
 }
