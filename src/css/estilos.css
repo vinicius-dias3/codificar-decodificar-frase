@@ -2,16 +2,29 @@
 
 body{
     min-height: 100vh;
-    background-color: white;
-    background-image: linear-gradient(-135deg, #e2e2e2, white, #e2e2e2);
+    background-image: url(../images/bg-projeto.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+body::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: -1;
 }
 
 html{
     font-family: 'Roboto Slab', serif;
     color: #5d5d5d;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .header .titulo{
@@ -21,7 +34,7 @@ html{
 }
 
 .conteiner{
-    /* background-color: cadetblue; */
+    border-top: 1px solid #00cfe6;
     padding: 0 25px;
     /* margin: 20px; apenas no responsivo */
     width: 1000px;
@@ -41,7 +54,14 @@ h1, h3{
     display: block;
     border-radius: 12px;
     padding: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: .2s linear;
+    color: white;
 }
+
+.conteiner-entrada-frase textarea::placeholder{color: white;}
+
+.conteiner-entrada-frase textarea:focus{background-color: rgba(255, 255, 255, 0.45);}
 
 .conteiner-entrada-frase .span{
     font-style: italic;
@@ -50,12 +70,28 @@ h1, h3{
 }
 
 .conteiner-entrada-frase .btn{
-    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: transparent;
+    padding: 10px;
     margin-top: 10px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 700;
+    margin-right: 20px;
+    width: 102px;
+    transition: .2s linear;
 }
+
+.conteiner-entrada-frase .btn.ativar{
+    animation: efeito-clique .4s linear
+}
+
+@keyframes efeito-clique{
+
+}
+
+.conteiner-entrada-frase .btn:hover{letter-spacing: 1px;}
 
 .conteiner-frases .conteiner-saida-frase{
     /* background-color: cadetblue; */
@@ -72,37 +108,36 @@ h1, h3{
 
 .conteiner-frases .conteiner-saida-frase .resultado{
     margin: 0 20px 30px;
-    outline: 5px solid rgb(231, 231, 231);
+    outline: 5px solid #ffffff73;
     outline-offset: 20px;
     width: 450px;
-    height: 110px;
+    height: 120px;
     border-radius: 20px;
     position: relative;
     padding: 10px 20px 0;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    box-shadow: -6px -9px 19px rgba(255, 255, 255, 0.3), 8px 9px 19px rgba(255, 255, 255, 0.3);
 }
 
 .conteiner-frases .resultado .aspas{
     font-size: 40px;
-    color: #93e327;
-}
-
-.conteiner-frases .resultado .aspas.fa-quote-left{
+    color: white;
     position: absolute;
     transform: rotateY(180deg) rotate(180deg);
     top: -35px;
     left: 0;
-    background-color: white;
+    background-color: transparent;
 }
 
 .conteiner-saida-frase .resultado p{
     font-family: 'Roboto Mono', monospace;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 400;
 }
 
 .conteiner-saida-frase .resultado .btn-copiar{
-    color: #93e327;
-    /* background-color: white; */
+    color: white;
+    background-color: transparent;
     font-size: 40px;
     position: absolute;
     right: 2%;
@@ -125,7 +160,7 @@ h1, h3{
         opacity: .6;
     }
     85%{
-        color: #6db60f;
+        color: #00E4FF;
         opacity: .9;
     }
     100%{
