@@ -9,7 +9,7 @@ let conteudoFraseDecodificada
 const substituicoesCodificar = {
     'a': 'ai',
     'e': 'ey',
-    'i': 'ee',
+    'i': 'fr',
     'o': 'bi',
     'u': 'oo',
     's': 'wq',
@@ -41,7 +41,7 @@ botaoDecodificar.addEventListener('click', (event)=> {
     .replace(/wq/g, 's')
     .replace(/oo/g, 'u')
     .replace(/bi/g, 'o')
-    .replace(/ee/g, 'i')
+    .replace(/fr/g, 'i')
     .replace(/ey/g, 'e')
     .replace(/ai/g, 'a')
     // console.log(fraseDecodificada) //funcionando

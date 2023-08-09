@@ -1,0 +1,38 @@
+@media (max-width: 765px){
+    .header {
+        font-size: 18px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .conteiner{
+        width: 400px;
+        width: auto;
+        padding: 10px 10px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteiner > p{
+        width: 340px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .conteiner-frases{display: block;}
+
+    .conteiner-frases .conteiner-entrada-frase{text-align: center;}
+
+    .conteiner-frases .conteiner-entrada-frase textarea{width: 330px;}
+
+    .conteiner-frases .conteiner-entrada-frase .btn::after{background-color: rgba(0, 53, 89, 0.7);}
+
+    .conteiner-frases .conteiner-saida-frase{margin-top: 30px;}
+
+    .conteiner-frases .conteiner-saida-frase .resultado{
+        margin: 40px auto 0;
+        width: 290px;
+        height: 140px;
+    }
+}
